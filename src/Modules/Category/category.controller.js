@@ -3,6 +3,8 @@ import { ErrorHandlerClass } from "../../Utils/error-class.util.js"
 import compareObjectIDs from "../../Utils/compare-objectIDs.util.js"
 import isCategoryExist from "../../Utils/isCategoryExist.util.js"
 import isCategoryIdValid from "../../Utils/isCategoryIdValid.util.js"
+import findCategories from "../../Utils/find-categories.util.js"
+
 
 
 
@@ -47,14 +49,9 @@ export const createCategory = async(req, res, next)=>{
 export const getAllCategories = async(req, res, next)=>{
     const userId = req.userData._id
     
-    const categories = await Category.find({addedBy: userId}).select("-__v -updatedAt -createdAt")
-
-    if(categories.length === 0){
-        return next(new ErrorHandlerClass("Categories not found", 404, "Get All Categories API error " +
-            req.protocol +
-            "://" +
-            req.headers.host +
-            req.originalUrl))
+    const categories = await findCategories(userId, "Get All Categories")
+    if(!Array.isArray(categories)){
+        return next(categories)
     }
 
   
@@ -116,6 +113,88 @@ export const deleteCategory = async(req, res, next)=>{
 
 
 
+export const getCategoriesSortedByName = async(req, res, next)=>{
+    const userId = req.userData._id
+    
+    const categories = await Category.aggregate([
+        {
+            $match: {
+                addedBy: userId
+            }
+        },
+        {
+            $sort: {
+                name: 1
+            }
+        },
+     
+        {
+            $project: {
+                _id: 1,
+                name: 1,
+                addedBy: 1
+            }
+        }
+    ])
+  
+    return res.status(200).json({message: "Categories found successfully", categories})
+
+}
 
 
 
+
+export const getCategoriesSortedByTaskSharedOption = async(req, res, next)=>{
+    const userId = req.userData._id
+    
+    const categories = await Category.aggregate([
+        {
+            $match: {
+                addedBy: userId
+            }
+        },
+        {
+            $lookup: {
+                from: "tasks",
+                localField: "_id",
+                foreignField: "category",
+                as: "tasks"
+            }
+        },
+        {
+            $unwind: "$tasks" 
+        },
+        {
+            $sort: {
+              "tasks.shared": 1 
+            }
+        },
+        {
+            $group: {
+              _id: "$_id",
+              name: { $first: "$name" },
+              addedBy: { $first: "$addedBy" },
+              tasks: { $push: "$tasks" } 
+            }
+        },
+        {
+            $project: {
+                _id: 1,
+                name: 1,
+                addedBy: 1,
+                tasks: 1,
+                tasks:{
+                    _id: 1,
+                    name: 1,
+                    description: 1,
+                    shared: 1,
+                    category: 1
+                }
+                
+            }
+        }
+    ])
+  
+    return res.status(200).json({message: "Categories found successfully", categories})
+
+}

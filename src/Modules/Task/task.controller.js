@@ -160,7 +160,7 @@ export const filterBySharedOption = async(req, res, next)=>{
 export const getAllTasksSortedByCategoryName = async(req, res, next)=>{
     const userId = req.userData._id
     
-    const categories = await findCategories(userId, "Get All Tasks")
+    const categories = await findCategories(userId, "Get All Tasks Sorted By Category Name")
     if(!Array.isArray(categories)){
         return next(categories)
     }
@@ -240,7 +240,7 @@ export const getAllTasksSortedByCategoryName = async(req, res, next)=>{
 export const getAllTasksSortedBySharedOption = async(req, res, next)=>{
     const userId = req.userData._id
     
-    const categories = await findCategories(userId, "Get All Tasks")
+    const categories = await findCategories(userId, "Get All Tasks Sorted By Shared Option")
     if(!Array.isArray(categories)){
         return next(categories)
     }

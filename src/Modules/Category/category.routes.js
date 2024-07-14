@@ -14,6 +14,10 @@ router.post('/create', errorHandler(authentication()), validationMiddleware(crea
 
 router.get('/get', errorHandler(authentication()), errorHandler(categoryController.getAllCategories))
 
+router.get('/getCategoriesSortedByName', errorHandler(authentication()), errorHandler(categoryController.getCategoriesSortedByName))
+
+router.get('/getCategoriesSortedByTaskSharedOption', errorHandler(authentication()), errorHandler(categoryController.getCategoriesSortedByTaskSharedOption))
+
 router.patch('/update/:id', errorHandler(authentication()),validationMiddleware(updateCategorySchema), errorHandler(categoryController.updateCategory))
 
 router.delete('/delete/:id', errorHandler(authentication()), validationMiddleware(deleteCategorySchema), errorHandler(categoryController.deleteCategory))
