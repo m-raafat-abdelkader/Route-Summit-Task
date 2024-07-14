@@ -386,6 +386,89 @@
 					]
 				},
 				{
+					"name": "get all categories sorted by name",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "taskapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjkzNTMyMTI2NGExYmM5NzllNmYzMGYiLCJlbWFpbCI6Im1vaGFtZWQucmFhZmF0LmFiZGVsa2FkZXJAZ21haWwuY29tIiwiaWF0IjoxNzIwOTMyOTM2LCJleHAiOjE3MjEwMTkzMzZ9.hGnE0GccPeiOqLB4RfcyL4YXs7OitGJPPFtK05zK4I8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/category/getCategoriesSortedByName",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"category",
+								"getCategoriesSortedByName"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get all categories sorted by name",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "taskapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjkzNTMyMTI2NGExYmM5NzllNmYzMGYiLCJlbWFpbCI6Im1vaGFtZWQucmFhZmF0LmFiZGVsa2FkZXJAZ21haWwuY29tIiwiaWF0IjoxNzIwOTMyOTM2LCJleHAiOjE3MjEwMTkzMzZ9.hGnE0GccPeiOqLB4RfcyL4YXs7OitGJPPFtK05zK4I8",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/category/getCategoriesSortedByName",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"category",
+										"getCategoriesSortedByName"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "411"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"19b-2C+jMM00b0Xi+NUBRzYBOoxE9Z4\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 14 Jul 2024 18:07:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Categories found successfully\",\n    \"categories\": [\n        {\n            \"_id\": \"66939d0a6b96f8f486e012f9\",\n            \"name\": \"cs\",\n            \"addedBy\": \"66935321264a1bc979e6f30f\"\n        },\n        {\n            \"_id\": \"6693a51af710ea8a4eb37f9a\",\n            \"name\": \"editing\",\n            \"addedBy\": \"66935321264a1bc979e6f30f\"\n        },\n        {\n            \"_id\": \"66935f79b41702bad7b5c2df\",\n            \"name\": \"programming\",\n            \"addedBy\": \"66935321264a1bc979e6f30f\"\n        },\n        {\n            \"_id\": \"66935f64b41702bad7b5c2d7\",\n            \"name\": \"space\",\n            \"addedBy\": \"66935321264a1bc979e6f30f\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
 					"name": "update category",
 					"request": {
 						"method": "PATCH",
@@ -568,6 +651,89 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"message\": \"Category deleted successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get all categories sorted by task shared option",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "taskapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjkzNTMyMTI2NGExYmM5NzllNmYzMGYiLCJlbWFpbCI6Im1vaGFtZWQucmFhZmF0LmFiZGVsa2FkZXJAZ21haWwuY29tIiwiaWF0IjoxNzIwOTMyOTM2LCJleHAiOjE3MjEwMTkzMzZ9.hGnE0GccPeiOqLB4RfcyL4YXs7OitGJPPFtK05zK4I8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/category/getCategoriesSortedByTaskSharedOption",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"category",
+								"getCategoriesSortedByTaskSharedOption"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get all categories sorted by task shared option",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "taskapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjkzNTMyMTI2NGExYmM5NzllNmYzMGYiLCJlbWFpbCI6Im1vaGFtZWQucmFhZmF0LmFiZGVsa2FkZXJAZ21haWwuY29tIiwiaWF0IjoxNzIwOTMyOTM2LCJleHAiOjE3MjEwMTkzMzZ9.hGnE0GccPeiOqLB4RfcyL4YXs7OitGJPPFtK05zK4I8",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/category/getCategoriesSortedByTaskSharedOption",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"category",
+										"getCategoriesSortedByTaskSharedOption"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "653"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"28d-wsR7louiJD2lVAjoTMrnwMCmcms\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 14 Jul 2024 18:46:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Categories found successfully\",\n    \"categories\": [\n        {\n            \"_id\": \"6693a51af710ea8a4eb37f9a\",\n            \"name\": \"editing\",\n            \"addedBy\": \"66935321264a1bc979e6f30f\",\n            \"tasks\": [\n                {\n                    \"_id\": \"6693f6a978a315677db6663f\",\n                    \"name\": \"task3\",\n                    \"description\": \"running\",\n                    \"shared\": \"Private\",\n                    \"category\": \"6693a51af710ea8a4eb37f9a\"\n                }\n            ]\n        },\n        {\n            \"_id\": \"66939d0a6b96f8f486e012f9\",\n            \"name\": \"cs\",\n            \"addedBy\": \"66935321264a1bc979e6f30f\",\n            \"tasks\": [\n                {\n                    \"_id\": \"6693f74b98b46f1b971d222a\",\n                    \"name\": \"coding\",\n                    \"description\": \"nodejs project\",\n                    \"shared\": \"Private\",\n                    \"category\": \"66939d0a6b96f8f486e012f9\"\n                },\n                {\n                    \"_id\": \"6693cee20987e4d53b46eb7e\",\n                    \"name\": \"task2\",\n                    \"description\": \"study c++\",\n                    \"shared\": \"Public\",\n                    \"category\": \"66939d0a6b96f8f486e012f9\"\n                }\n            ]\n        }\n    ]\n}"
 						}
 					]
 				}
