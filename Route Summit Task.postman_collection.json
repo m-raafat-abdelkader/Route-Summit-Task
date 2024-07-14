@@ -1,0 +1,1317 @@
+{
+	"info": {
+		"_postman_id": "dc2ef4ae-e768-4661-a624-802d8ff0f985",
+		"name": "Route Summit Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32279973"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"mraafat\", \r\n    \"email\": \"mohamed.raafat.abdelkader@gmail.com\", \r\n    \"password\": \"1aAbc$d04\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/signup",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"signup"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "signup",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"mraafat\", \r\n    \"email\": \"mohamed.raafat.abdelkader@gmail.com\", \r\n    \"password\": \"1aAbc$d04\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/user/signup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"user",
+										"signup"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "75"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4b-m/EAnTl9hygnnaB0enMc2iRBzMg\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 14 Jul 2024 04:25:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User created successfully\",\n    \"userId\": \"66935321264a1bc979e6f30f\"\n}"
+						}
+					]
+				},
+				{
+					"name": "sign in",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"mohamed.raafat.abdelkader@gmail.com\", \r\n    \"password\": \"1aAbc$d04\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "sign in",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"mohamed.raafat.abdelkader@gmail.com\", \r\n    \"password\": \"1aAbc$d04\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/user/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"user",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "289"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"121-TBrAEp4GMNMYK7M45XlgHzVCQTI\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 14 Jul 2024 04:26:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User logged in successfully\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjkzNTMyMTI2NGExYmM5NzllNmYzMGYiLCJlbWFpbCI6Im1vaGFtZWQucmFhZmF0LmFiZGVsa2FkZXJAZ21haWwuY29tIiwiaWF0IjoxNzIwOTMxMTg5LCJleHAiOjE3MjEwMTc1ODl9.T_GCX_tutcgHtXNE5IC2hu2stYBAUPHo5J0GdnhR1tM\"\n}"
+						}
+					]
+				}
+			],
+			"description": "### User APIs\n\n1. Sign Up\n    \n2. Sign In"
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "create category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "taskapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjkzNTMyMTI2NGExYmM5NzllNmYzMGYiLCJlbWFpbCI6Im1vaGFtZWQucmFhZmF0LmFiZGVsa2FkZXJAZ21haWwuY29tIiwiaWF0IjoxNzIwOTMyOTM2LCJleHAiOjE3MjEwMTkzMzZ9.hGnE0GccPeiOqLB4RfcyL4YXs7OitGJPPFtK05zK4I8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"solo\", \r\n    \"addedBy\": \"66935321264a1bc979e6f30f\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/category/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"category",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create category",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "taskapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjkzNTMyMTI2NGExYmM5NzllNmYzMGYiLCJlbWFpbCI6Im1vaGFtZWQucmFhZmF0LmFiZGVsa2FkZXJAZ21haWwuY29tIiwiaWF0IjoxNzIwOTMyOTM2LCJleHAiOjE3MjEwMTkzMzZ9.hGnE0GccPeiOqLB4RfcyL4YXs7OitGJPPFtK05zK4I8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Tech\", \r\n    \"addedBy\": \"66935321264a1bc979e6f30f\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/category/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"category",
+										"create"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "226"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e2-Yisn+B35c659xU0duaoqa80bh7s\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 14 Jul 2024 04:55:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Category created successfully\",\n    \"category\": {\n        \"name\": \"tech\",\n        \"addedBy\": \"66935321264a1bc979e6f30f\",\n        \"_id\": \"66935a5ab9b8c41982f79c05\",\n        \"createdAt\": \"2024-07-14T04:55:54.229Z\",\n        \"updatedAt\": \"2024-07-14T04:55:54.229Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "get all categories",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "taskapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjkzNTMyMTI2NGExYmM5NzllNmYzMGYiLCJlbWFpbCI6Im1vaGFtZWQucmFhZmF0LmFiZGVsa2FkZXJAZ21haWwuY29tIiwiaWF0IjoxNzIwOTMyOTM2LCJleHAiOjE3MjEwMTkzMzZ9.hGnE0GccPeiOqLB4RfcyL4YXs7OitGJPPFtK05zK4I8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/category/get",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"category",
+								"get"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get all categories",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "taskapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjkzNTMyMTI2NGExYmM5NzllNmYzMGYiLCJlbWFpbCI6Im1vaGFtZWQucmFhZmF0LmFiZGVsa2FkZXJAZ21haWwuY29tIiwiaWF0IjoxNzIwOTMyOTM2LCJleHAiOjE3MjEwMTkzMzZ9.hGnE0GccPeiOqLB4RfcyL4YXs7OitGJPPFtK05zK4I8",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/category/get",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"category",
+										"get"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "757"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2f5-9be4UVyVNERLwfToLxNTwmrs71U\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 14 Jul 2024 05:17:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Categories found successfully\",\n    \"categories\": [\n        {\n            \"_id\": \"66935a5ab9b8c41982f79c05\",\n            \"name\": \"tech\",\n            \"addedBy\": \"66935321264a1bc979e6f30f\",\n            \"createdAt\": \"2024-07-14T04:55:54.229Z\",\n            \"updatedAt\": \"2024-07-14T04:55:54.229Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"66935f64b41702bad7b5c2d7\",\n            \"name\": \"space\",\n            \"addedBy\": \"66935321264a1bc979e6f30f\",\n            \"createdAt\": \"2024-07-14T05:17:24.823Z\",\n            \"updatedAt\": \"2024-07-14T05:17:24.823Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"66935f6db41702bad7b5c2db\",\n            \"name\": \"editing\",\n            \"addedBy\": \"66935321264a1bc979e6f30f\",\n            \"createdAt\": \"2024-07-14T05:17:33.770Z\",\n            \"updatedAt\": \"2024-07-14T05:17:33.770Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"66935f79b41702bad7b5c2df\",\n            \"name\": \"programming\",\n            \"addedBy\": \"66935321264a1bc979e6f30f\",\n            \"createdAt\": \"2024-07-14T05:17:45.798Z\",\n            \"updatedAt\": \"2024-07-14T05:17:45.798Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "update category",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "token",
+								"value": "taskapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjkzNTMyMTI2NGExYmM5NzllNmYzMGYiLCJlbWFpbCI6Im1vaGFtZWQucmFhZmF0LmFiZGVsa2FkZXJAZ21haWwuY29tIiwiaWF0IjoxNzIwOTMyOTM2LCJleHAiOjE3MjEwMTkzMzZ9.hGnE0GccPeiOqLB4RfcyL4YXs7OitGJPPFtK05zK4I8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/category/update/66935f6db41702bad7b5c2db?name=tech",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"category",
+								"update",
+								"66935f6db41702bad7b5c2db"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "tech"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update category",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "token",
+										"value": "taskapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjkzNTMyMTI2NGExYmM5NzllNmYzMGYiLCJlbWFpbCI6Im1vaGFtZWQucmFhZmF0LmFiZGVsa2FkZXJAZ21haWwuY29tIiwiaWF0IjoxNzIwOTMyOTM2LCJleHAiOjE3MjEwMTkzMzZ9.hGnE0GccPeiOqLB4RfcyL4YXs7OitGJPPFtK05zK4I8",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/category/update/66935a5ab9b8c41982f79c05?name=tech",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"category",
+										"update",
+										"66935a5ab9b8c41982f79c05"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "tech"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "229"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e5-lB2Vj1VIEGpnprfO5mwTBpeR7gg\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 14 Jul 2024 05:31:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Category updated successfully\",\n    \"newCategory\": {\n        \"_id\": \"66935a5ab9b8c41982f79c05\",\n        \"name\": \"tech\",\n        \"addedBy\": \"66935321264a1bc979e6f30f\",\n        \"createdAt\": \"2024-07-14T04:55:54.229Z\",\n        \"updatedAt\": \"2024-07-14T05:31:16.505Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete category",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "taskapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjkzNTMyMTI2NGExYmM5NzllNmYzMGYiLCJlbWFpbCI6Im1vaGFtZWQucmFhZmF0LmFiZGVsa2FkZXJAZ21haWwuY29tIiwiaWF0IjoxNzIwOTMyOTM2LCJleHAiOjE3MjEwMTkzMzZ9.hGnE0GccPeiOqLB4RfcyL4YXs7OitGJPPFtK05zK4I8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/category/delete/66935a5ab9b8c41982f79c05",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"category",
+								"delete",
+								"66935a5ab9b8c41982f79c05"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete category",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "token",
+										"value": "taskapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjkzNTMyMTI2NGExYmM5NzllNmYzMGYiLCJlbWFpbCI6Im1vaGFtZWQucmFhZmF0LmFiZGVsa2FkZXJAZ21haWwuY29tIiwiaWF0IjoxNzIwOTMyOTM2LCJleHAiOjE3MjEwMTkzMzZ9.hGnE0GccPeiOqLB4RfcyL4YXs7OitGJPPFtK05zK4I8",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/category/delete/66935a5ab9b8c41982f79c05",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"category",
+										"delete",
+										"66935a5ab9b8c41982f79c05"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "43"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2b-oSB9C9UJoaUkZ5Mu5gkTHkZwuV4\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 14 Jul 2024 05:32:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Category deleted successfully\"\n}"
+						}
+					]
+				}
+			],
+			"description": "### Category APIs (CRUD Operations)\n\n1. Create Category\n    \n2. Get All Categories\n    \n3. Update Category\n    \n4. Delete Category"
+		},
+		{
+			"name": "Task",
+			"item": [
+				{
+					"name": "create task",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "taskapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjkzNTMyMTI2NGExYmM5NzllNmYzMGYiLCJlbWFpbCI6Im1vaGFtZWQucmFhZmF0LmFiZGVsa2FkZXJAZ21haWwuY29tIiwiaWF0IjoxNzIwOTMyOTM2LCJleHAiOjE3MjEwMTkzMzZ9.hGnE0GccPeiOqLB4RfcyL4YXs7OitGJPPFtK05zK4I8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"coding\",\r\n    \"description\": \"nodejs project\",\r\n    \"categoryId\": \"66939d0a6b96f8f486e012f9\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/task/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"task",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create task",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "taskapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjkzNTMyMTI2NGExYmM5NzllNmYzMGYiLCJlbWFpbCI6Im1vaGFtZWQucmFhZmF0LmFiZGVsa2FkZXJAZ21haWwuY29tIiwiaWF0IjoxNzIwOTMyOTM2LCJleHAiOjE3MjEwMTkzMzZ9.hGnE0GccPeiOqLB4RfcyL4YXs7OitGJPPFtK05zK4I8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"task2\",\r\n    \"description\": [{\"text\": \"study database\"}, {\"text\": \"cleaning resources\"} ],\r\n    \"categoryId\": \"66935eb4b41702bad7b5c2c6\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/task/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"task",
+										"create"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "63"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3f-3YGErGBsanINz1JXiPUUVGnbBAg\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 14 Jul 2024 13:13:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Task Created\",\n    \"task_id\": \"6693cee20987e4d53b46eb7e\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get all tasks for a specific user",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "taskapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjkzNWUyZWI0MTcwMmJhZDdiNWMyYmEiLCJlbWFpbCI6ImFsaWhhbWVkMTIwQGdtYWlsLmNvbSIsImlhdCI6MTcyMDk2MzYzNiwiZXhwIjoxNzIxMDUwMDM2fQ.W0xVaFtFqGjMueDMaUUAvDLABiQc2xR5kHk-6PZBKUo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/task/getAll",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"task",
+								"getAll"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get all tasks for a specific user",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "taskapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjkzNWUyZWI0MTcwMmJhZDdiNWMyYmEiLCJlbWFpbCI6ImFsaWhhbWVkMTIwQGdtYWlsLmNvbSIsImlhdCI6MTcyMDk2MzYzNiwiZXhwIjoxNzIxMDUwMDM2fQ.W0xVaFtFqGjMueDMaUUAvDLABiQc2xR5kHk-6PZBKUo",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/task/getAll",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"task",
+										"getAll"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "814"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"32e-uTfa9Lyfd/Wjo5SiMOFs2A7wZ5M\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 14 Jul 2024 13:28:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Tasks Found\",\n    \"tasks\": [\n        {\n            \"_id\": \"6693ccc246b4f83c7a941d46\",\n            \"name\": \"task1\",\n            \"description\": [\n                {\n                    \"text\": \"kamire froyed\"\n                },\n                {\n                    \"text\": \"stayed dimense\"\n                }\n            ],\n            \"shared\": \"Private\",\n            \"category\": \"66935eb4b41702bad7b5c2c6\",\n            \"createdAt\": \"2024-07-14T13:04:02.089Z\",\n            \"updatedAt\": \"2024-07-14T13:04:02.089Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6693ce800987e4d53b46eb7b\",\n            \"name\": \"task1\",\n            \"description\": [\n                {\n                    \"text\": \"play guitar\"\n                },\n                {\n                    \"text\": \"learn chess\"\n                }\n            ],\n            \"shared\": \"Private\",\n            \"category\": \"66935eb4b41702bad7b5c2c6\",\n            \"createdAt\": \"2024-07-14T13:11:28.095Z\",\n            \"updatedAt\": \"2024-07-14T13:11:28.095Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6693cee20987e4d53b46eb7e\",\n            \"name\": \"task2\",\n            \"description\": [\n                {\n                    \"text\": \"study database\"\n                },\n                {\n                    \"text\": \"cleaning resources\"\n                }\n            ],\n            \"shared\": \"Public\",\n            \"category\": \"66935eb4b41702bad7b5c2c6\",\n            \"createdAt\": \"2024-07-14T13:13:06.972Z\",\n            \"updatedAt\": \"2024-07-14T13:13:06.972Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "update task",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "taskapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjkzNTMyMTI2NGExYmM5NzllNmYzMGYiLCJlbWFpbCI6Im1vaGFtZWQucmFhZmF0LmFiZGVsa2FkZXJAZ21haWwuY29tIiwiaWF0IjoxNzIwOTY4Mjc2LCJleHAiOjE3MjEwNTQ2NzZ9.GTn6S4pk4DnZMozRtPs9kQsF-lTXC-1HnZ731R7gFPE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"task3\",\r\n    \"description\": \"study c++\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/task/update/6693cee20987e4d53b46eb7e",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"task",
+								"update",
+								"6693cee20987e4d53b46eb7e"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update task",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "token",
+										"value": "taskapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjkzNTMyMTI2NGExYmM5NzllNmYzMGYiLCJlbWFpbCI6Im1vaGFtZWQucmFhZmF0LmFiZGVsa2FkZXJAZ21haWwuY29tIiwiaWF0IjoxNzIwOTY4Mjc2LCJleHAiOjE3MjEwNTQ2NzZ9.GTn6S4pk4DnZMozRtPs9kQsF-lTXC-1HnZ731R7gFPE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"task3\",\r\n    \"description\": \"study c++\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/task/update/6693cee20987e4d53b46eb7e",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"task",
+										"update",
+										"6693cee20987e4d53b46eb7e"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "185"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b9-67Iq+rdf6ZVE3fQ5Xn3etOZ0FAE\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 14 Jul 2024 15:11:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Task updated successfully\",\n    \"updatedTask\": {\n        \"_id\": \"6693cee20987e4d53b46eb7e\",\n        \"name\": \"task3\",\n        \"description\": \"study c++\",\n        \"shared\": \"Public\",\n        \"category\": \"66939d0a6b96f8f486e012f9\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete task",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "taskapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjkzNTMyMTI2NGExYmM5NzllNmYzMGYiLCJlbWFpbCI6Im1vaGFtZWQucmFhZmF0LmFiZGVsa2FkZXJAZ21haWwuY29tIiwiaWF0IjoxNzIwOTY4Mjc2LCJleHAiOjE3MjEwNTQ2NzZ9.GTn6S4pk4DnZMozRtPs9kQsF-lTXC-1HnZ731R7gFPE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/task/delete/6693ce800987e4d53b46eb7b",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"task",
+								"delete",
+								"6693ce800987e4d53b46eb7b"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete task",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "token",
+										"value": "taskapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjkzNTMyMTI2NGExYmM5NzllNmYzMGYiLCJlbWFpbCI6Im1vaGFtZWQucmFhZmF0LmFiZGVsa2FkZXJAZ21haWwuY29tIiwiaWF0IjoxNzIwOTY4Mjc2LCJleHAiOjE3MjEwNTQ2NzZ9.GTn6S4pk4DnZMozRtPs9kQsF-lTXC-1HnZ731R7gFPE",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/task/delete/6693ce800987e4d53b46eb7b",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"task",
+										"delete",
+										"6693ce800987e4d53b46eb7b"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "39"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"27-urf4l4W7aUjEqcMghGgrIBDtf0M\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 14 Jul 2024 15:38:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Task deleted successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "filter tasks by category name",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "taskapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjkzNTMyMTI2NGExYmM5NzllNmYzMGYiLCJlbWFpbCI6Im1vaGFtZWQucmFhZmF0LmFiZGVsa2FkZXJAZ21haWwuY29tIiwiaWF0IjoxNzIwOTY4Mjc2LCJleHAiOjE3MjEwNTQ2NzZ9.GTn6S4pk4DnZMozRtPs9kQsF-lTXC-1HnZ731R7gFPE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/task/filterByCategoryName/cs",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"task",
+								"filterByCategoryName",
+								"cs"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "filter tasks by category name",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "taskapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjkzNTMyMTI2NGExYmM5NzllNmYzMGYiLCJlbWFpbCI6Im1vaGFtZWQucmFhZmF0LmFiZGVsa2FkZXJAZ21haWwuY29tIiwiaWF0IjoxNzIwOTY4Mjc2LCJleHAiOjE3MjEwNTQ2NzZ9.GTn6S4pk4DnZMozRtPs9kQsF-lTXC-1HnZ731R7gFPE",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/task/filterByCategoryName/cs",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"task",
+										"filterByCategoryName",
+										"cs"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "306"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"132-P90FR+39H/zo0BwsWpNRkkULZNY\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 14 Jul 2024 16:05:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Tasks Found\",\n    \"tasks\": [\n        {\n            \"_id\": \"6693cee20987e4d53b46eb7e\",\n            \"name\": \"task2\",\n            \"description\": \"study c++\",\n            \"shared\": \"Public\",\n            \"category\": \"66939d0a6b96f8f486e012f9\"\n        },\n        {\n            \"_id\": \"6693f74b98b46f1b971d222a\",\n            \"name\": \"coding\",\n            \"description\": \"nodejs project\",\n            \"shared\": \"Private\",\n            \"category\": \"66939d0a6b96f8f486e012f9\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "filter tasks by shared option",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "taskapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjkzNTMyMTI2NGExYmM5NzllNmYzMGYiLCJlbWFpbCI6Im1vaGFtZWQucmFhZmF0LmFiZGVsa2FkZXJAZ21haWwuY29tIiwiaWF0IjoxNzIwOTY4Mjc2LCJleHAiOjE3MjEwNTQ2NzZ9.GTn6S4pk4DnZMozRtPs9kQsF-lTXC-1HnZ731R7gFPE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/task/filterBySharedOption/Private",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"task",
+								"filterBySharedOption",
+								"Private"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "filter tasks by shared option",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "taskapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjkzNTMyMTI2NGExYmM5NzllNmYzMGYiLCJlbWFpbCI6Im1vaGFtZWQucmFhZmF0LmFiZGVsa2FkZXJAZ21haWwuY29tIiwiaWF0IjoxNzIwOTY4Mjc2LCJleHAiOjE3MjEwNTQ2NzZ9.GTn6S4pk4DnZMozRtPs9kQsF-lTXC-1HnZ731R7gFPE",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/task/filterBySharedOption/Private",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"task",
+										"filterBySharedOption",
+										"Private"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "305"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"131-Ar8b0zt2C/uKh7rliqKbjT0p+2g\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 14 Jul 2024 16:11:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Tasks Found\",\n    \"tasks\": [\n        {\n            \"_id\": \"6693f6a978a315677db6663f\",\n            \"name\": \"task3\",\n            \"description\": \"running\",\n            \"shared\": \"Private\",\n            \"category\": \"6693a373c3cf4801ffc3a27a\"\n        },\n        {\n            \"_id\": \"6693f74b98b46f1b971d222a\",\n            \"name\": \"coding\",\n            \"description\": \"nodejs project\",\n            \"shared\": \"Private\",\n            \"category\": \"66939d0a6b96f8f486e012f9\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "find all tasks sorted by category name",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "taskapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjkzNTMyMTI2NGExYmM5NzllNmYzMGYiLCJlbWFpbCI6Im1vaGFtZWQucmFhZmF0LmFiZGVsa2FkZXJAZ21haWwuY29tIiwiaWF0IjoxNzIwOTY4Mjc2LCJleHAiOjE3MjEwNTQ2NzZ9.GTn6S4pk4DnZMozRtPs9kQsF-lTXC-1HnZ731R7gFPE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/task/getAllTasksSortedByCategoryName",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"task",
+								"getAllTasksSortedByCategoryName"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "find all tasks sorted by category name",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "taskapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjkzNTMyMTI2NGExYmM5NzllNmYzMGYiLCJlbWFpbCI6Im1vaGFtZWQucmFhZmF0LmFiZGVsa2FkZXJAZ21haWwuY29tIiwiaWF0IjoxNzIwOTY4Mjc2LCJleHAiOjE3MjEwNTQ2NzZ9.GTn6S4pk4DnZMozRtPs9kQsF-lTXC-1HnZ731R7gFPE",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/task/getAllTasksSortedByCategoryName",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"task",
+										"getAllTasksSortedByCategoryName"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "619"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"26b-ESNqFjgva6ghYVLEMh5/clal1Ek\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 14 Jul 2024 17:24:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Tasks Found\",\n    \"tasks\": [\n        {\n            \"_id\": \"6693cee20987e4d53b46eb7e\",\n            \"name\": \"task2\",\n            \"description\": \"study c++\",\n            \"shared\": \"Public\",\n            \"category\": [\n                {\n                    \"_id\": \"66939d0a6b96f8f486e012f9\",\n                    \"name\": \"cs\",\n                    \"addedBy\": \"66935321264a1bc979e6f30f\"\n                }\n            ]\n        },\n        {\n            \"_id\": \"6693f74b98b46f1b971d222a\",\n            \"name\": \"coding\",\n            \"description\": \"nodejs project\",\n            \"shared\": \"Private\",\n            \"category\": [\n                {\n                    \"_id\": \"66939d0a6b96f8f486e012f9\",\n                    \"name\": \"cs\",\n                    \"addedBy\": \"66935321264a1bc979e6f30f\"\n                }\n            ]\n        },\n        {\n            \"_id\": \"6693f6a978a315677db6663f\",\n            \"name\": \"task3\",\n            \"description\": \"running\",\n            \"shared\": \"Private\",\n            \"category\": [\n                {\n                    \"_id\": \"6693a51af710ea8a4eb37f9a\",\n                    \"name\": \"editing\",\n                    \"addedBy\": \"66935321264a1bc979e6f30f\"\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "find all tasks sorted by shared option",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "taskapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjkzNTMyMTI2NGExYmM5NzllNmYzMGYiLCJlbWFpbCI6Im1vaGFtZWQucmFhZmF0LmFiZGVsa2FkZXJAZ21haWwuY29tIiwiaWF0IjoxNzIwOTY4Mjc2LCJleHAiOjE3MjEwNTQ2NzZ9.GTn6S4pk4DnZMozRtPs9kQsF-lTXC-1HnZ731R7gFPE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/task/getAllTasksSortedBySharedOption",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"task",
+								"getAllTasksSortedBySharedOption"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "find all tasks sorted by shared option",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "taskapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjkzNTMyMTI2NGExYmM5NzllNmYzMGYiLCJlbWFpbCI6Im1vaGFtZWQucmFhZmF0LmFiZGVsa2FkZXJAZ21haWwuY29tIiwiaWF0IjoxNzIwOTY4Mjc2LCJleHAiOjE3MjEwNTQ2NzZ9.GTn6S4pk4DnZMozRtPs9kQsF-lTXC-1HnZ731R7gFPE",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/task/getAllTasksSortedBySharedOption",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"task",
+										"getAllTasksSortedBySharedOption"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "437"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1b5-I1Eh738HMUAW/TRf966s8hJ0InQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 14 Jul 2024 17:30:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Tasks Found\",\n    \"tasks\": [\n        {\n            \"_id\": \"6693f6a978a315677db6663f\",\n            \"name\": \"task3\",\n            \"description\": \"running\",\n            \"shared\": \"Private\",\n            \"category\": \"6693a51af710ea8a4eb37f9a\"\n        },\n        {\n            \"_id\": \"6693f74b98b46f1b971d222a\",\n            \"name\": \"coding\",\n            \"description\": \"nodejs project\",\n            \"shared\": \"Private\",\n            \"category\": \"66939d0a6b96f8f486e012f9\"\n        },\n        {\n            \"_id\": \"6693cee20987e4d53b46eb7e\",\n            \"name\": \"task2\",\n            \"description\": \"study c++\",\n            \"shared\": \"Public\",\n            \"category\": \"66939d0a6b96f8f486e012f9\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			],
+			"description": "### Task APIs (CRUD Operations)\n\n1. Create Task\n    \n2. Get All Tasks for a Specific User\n    \n3. Filter Tasks by Category Name\n    \n4. Filter Tasks by Shared Option\n    \n5. Find All Tasks Sorted by Category Name\n    \n6. Find All Tasks Sorted by Shared Option\n    \n7. Update Task\n    \n8. Delete Task"
+		}
+	]
+}
