@@ -1,4 +1,4 @@
-# Task Management API
+# Tasks App
 
 ## Overview
 
@@ -6,43 +6,43 @@ This API allows users to manage their tasks, which are organized into categories
 
 ### User Management
 
-#### Sign Up
+- Sign Up
 
-#### Sign In
+- Sign In
 
 ### Category Management
 
-#### Create Category
+- Create Category
 
-#### Get All Categories
+- Get All Categories
 
-#### Get All Categories by Name
+- Get All Categories by Name
 
-#### Get All Categories Sorted by Task's Shared Option
+- Get All Categories Sorted by Task's Shared Option
 
-#### Filter Categories by Task's Shared Option
+- Filter Categories by Task's Shared Option
 
-#### Update Category
+- Update Category
 
-#### Delete Category
+- Delete Category
 
 ### Task Management
 
-#### Create Task
+- Create Task
 
-#### Get All Tasks for a Specific User
+- Get All Tasks for a Specific User
 
-#### Filter Tasks by Category Name
+- Filter Tasks by Category Name
 
-#### Filter Tasks by Shared Option
+- Filter Tasks by Shared Option
 
-#### Find All Tasks Sorted by Category Name
+- Find All Tasks Sorted by Category Name
 
-#### Find All Tasks Sorted by Shared Option
+- Find All Tasks Sorted by Shared Option
 
-#### Update Task
+- Update Task
 
-#### Delete Task
+- Delete Task
 
 ## Technologies Used
 - Node.js
