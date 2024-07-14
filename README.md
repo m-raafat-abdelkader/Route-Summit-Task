@@ -1,9 +1,9 @@
-# Tasks Management App
+# Tasks Management API
 📘 Postman Documentation: https://documenter.getpostman.com/view/32279973/2sA3kPoPaq
 
 ## Overview
 
-This App allows users to manage their tasks, which are organized into categories for easier management. Users can create multiple categories, each containing tasks that can be shared publicly or kept private. Tasks can be either text tasks or list tasks.
+This API allows users to manage their tasks, which are organized into categories for easier management. Users can create multiple categories, each containing tasks that can be shared publicly or kept private. Tasks can be either text tasks or list tasks.
 
 ### User Management
 
