@@ -1,7 +1,8 @@
 {
 	"info": {
 		"_postman_id": "dc2ef4ae-e768-4661-a624-802d8ff0f985",
-		"name": "Route Summit Task",
+		"name": "Route-Summit-Task",
+		"description": "## Overview\n\nThis API allows users to manage their tasks, organized into categories for easier management. Basic user information (name, email, password) is stored in the database. Users can create multiple categories, each containing multiple tasks. Tasks can be shared (public) or private, and can be either text tasks or list tasks.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "32279973"
 	},
@@ -655,7 +656,7 @@
 					]
 				},
 				{
-					"name": "get all categories sorted by task shared option",
+					"name": "get all categories sorted by task's shared option",
 					"request": {
 						"method": "GET",
 						"header": [
@@ -736,9 +737,94 @@
 							"body": "{\n    \"message\": \"Categories found successfully\",\n    \"categories\": [\n        {\n            \"_id\": \"6693a51af710ea8a4eb37f9a\",\n            \"name\": \"editing\",\n            \"addedBy\": \"66935321264a1bc979e6f30f\",\n            \"tasks\": [\n                {\n                    \"_id\": \"6693f6a978a315677db6663f\",\n                    \"name\": \"task3\",\n                    \"description\": \"running\",\n                    \"shared\": \"Private\",\n                    \"category\": \"6693a51af710ea8a4eb37f9a\"\n                }\n            ]\n        },\n        {\n            \"_id\": \"66939d0a6b96f8f486e012f9\",\n            \"name\": \"cs\",\n            \"addedBy\": \"66935321264a1bc979e6f30f\",\n            \"tasks\": [\n                {\n                    \"_id\": \"6693f74b98b46f1b971d222a\",\n                    \"name\": \"coding\",\n                    \"description\": \"nodejs project\",\n                    \"shared\": \"Private\",\n                    \"category\": \"66939d0a6b96f8f486e012f9\"\n                },\n                {\n                    \"_id\": \"6693cee20987e4d53b46eb7e\",\n                    \"name\": \"task2\",\n                    \"description\": \"study c++\",\n                    \"shared\": \"Public\",\n                    \"category\": \"66939d0a6b96f8f486e012f9\"\n                }\n            ]\n        }\n    ]\n}"
 						}
 					]
+				},
+				{
+					"name": "filter categories by task's shared option",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "taskapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjkzNTMyMTI2NGExYmM5NzllNmYzMGYiLCJlbWFpbCI6Im1vaGFtZWQucmFhZmF0LmFiZGVsa2FkZXJAZ21haWwuY29tIiwiaWF0IjoxNzIwOTMyOTM2LCJleHAiOjE3MjEwMTkzMzZ9.hGnE0GccPeiOqLB4RfcyL4YXs7OitGJPPFtK05zK4I8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/category/filterCategoriesByTaskSharedOption/Public",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"category",
+								"filterCategoriesByTaskSharedOption",
+								"Public"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "filter categories by task's shared option",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "taskapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjkzNTMyMTI2NGExYmM5NzllNmYzMGYiLCJlbWFpbCI6Im1vaGFtZWQucmFhZmF0LmFiZGVsa2FkZXJAZ21haWwuY29tIiwiaWF0IjoxNzIwOTMyOTM2LCJleHAiOjE3MjEwMTkzMzZ9.hGnE0GccPeiOqLB4RfcyL4YXs7OitGJPPFtK05zK4I8",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/category/filterCategoriesByTaskSharedOption/Public",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"category",
+										"filterCategoriesByTaskSharedOption",
+										"Public"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "258"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"102-S1j/jwAQ63piyFestSl2S0qbl+8\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 14 Jul 2024 19:14:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Categories found successfully\",\n    \"Categories\": [\n        {\n            \"category\": [\n                {\n                    \"_id\": \"6693a373c3cf4801ffc3a27a\",\n                    \"name\": \"solo\",\n                    \"addedBy\": \"66935e2eb41702bad7b5c2ba\"\n                }\n            ]\n        },\n        {\n            \"category\": [\n                {\n                    \"_id\": \"66939d0a6b96f8f486e012f9\",\n                    \"name\": \"cs\",\n                    \"addedBy\": \"66935321264a1bc979e6f30f\"\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
 				}
 			],
-			"description": "### Category APIs (CRUD Operations)\n\n1. Create Category\n    \n2. Get All Categories\n    \n3. Update Category\n    \n4. Delete Category"
+			"description": "### Category APIs (CRUD Operations)\n\n1. Create Category\n    \n2. Get All Categories\n    \n3. Get All Categories by Name\n    \n4. Get All Categories Sorted by Task's Shared Option\n    \n5. Filter Categories by Task's Shared Option\n    \n6. Update Category\n    \n7. Delete Category"
 		},
 		{
 			"name": "Task",

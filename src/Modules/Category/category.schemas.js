@@ -33,3 +33,12 @@ export const deleteCategorySchema = {
     })
     
 }
+
+
+
+export const filterCategoriesByTaskSharedOptionSchema = {
+    params: Joi.object({
+        sharedOption: Joi.string().valid("Public", "Private").required()
+    })
+    
+}

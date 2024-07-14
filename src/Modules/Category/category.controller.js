@@ -1,4 +1,5 @@
 import Category from "../../../DB/Models/category.model.js"
+import Task from "../../../DB/Models/task.model.js"
 import { ErrorHandlerClass } from "../../Utils/error-class.util.js"
 import compareObjectIDs from "../../Utils/compare-objectIDs.util.js"
 import isCategoryExist from "../../Utils/isCategoryExist.util.js"
@@ -196,5 +197,45 @@ export const getCategoriesSortedByTaskSharedOption = async(req, res, next)=>{
     ])
   
     return res.status(200).json({message: "Categories found successfully", categories})
+
+}
+
+
+
+
+
+export const filterCategoriesByTaskSharedOption = async(req, res, next)=>{
+    const {sharedOption} = req.params
+    
+    const CategoriesBySharedOption = await Task.aggregate([
+        {
+            $match: {
+                shared: sharedOption
+            }
+        },
+        {
+            $lookup: {
+                from: "categories",
+                localField: "category",
+                foreignField: "_id",
+                as: "category"
+            }
+        },
+        {
+            $project: {
+                _id: 0,
+                category: 1,
+                category: {
+                    _id: 1,
+                    name: 1,
+                    addedBy: 1
+                }
+            }
+        }
+        
+    ])
+
+    
+    return res.status(200).json({message: "Categories found successfully", Categories: CategoriesBySharedOption})
 
 }

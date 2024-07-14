@@ -1,6 +1,6 @@
 import { errorHandler } from "../../Middlewares/error-handling.middleware.js";
 import { validationMiddleware } from "../../Middlewares/validation.middleware.js";
-import { createCategorySchema, updateCategorySchema, deleteCategorySchema } from "./category.schemas.js";
+import { createCategorySchema, updateCategorySchema, deleteCategorySchema, filterCategoriesByTaskSharedOptionSchema} from "./category.schemas.js";
 import authentication from "../../Middlewares/authentication.middleware.js";
 
 import { Router } from "express"; 
@@ -17,6 +17,8 @@ router.get('/get', errorHandler(authentication()), errorHandler(categoryControll
 router.get('/getCategoriesSortedByName', errorHandler(authentication()), errorHandler(categoryController.getCategoriesSortedByName))
 
 router.get('/getCategoriesSortedByTaskSharedOption', errorHandler(authentication()), errorHandler(categoryController.getCategoriesSortedByTaskSharedOption))
+
+router.get('/filterCategoriesByTaskSharedOption/:sharedOption', errorHandler(authentication()), validationMiddleware(filterCategoriesByTaskSharedOptionSchema),  errorHandler(categoryController.filterCategoriesByTaskSharedOption))
 
 router.patch('/update/:id', errorHandler(authentication()),validationMiddleware(updateCategorySchema), errorHandler(categoryController.updateCategory))
 
